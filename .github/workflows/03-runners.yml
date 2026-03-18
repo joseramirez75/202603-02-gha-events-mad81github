@@ -1,0 +1,27 @@
+name: 03 runners
+on:
+  push:
+jobs:
+  ubuntu-echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Mostrar SO"
+        run: |
+          echo "ESte trabajo se ejecuta en un Runner de ubuntu"
+          echo $RUNNER_OS
+jobs:
+  ubuntu-echo:
+    runs-on: window-latest
+    steps:
+      - name: "Mostrar SO"
+        run: |
+          echo "ESte trabajo se ejecuta en un Runner de window"
+          echo $RUNNER_OS
+jobs:
+  ubuntu-echo:
+    runs-on: mac-latest
+    steps:
+      - name: "Mostrar SO"
+        run: |
+          echo "ESte trabajo se ejecuta en un Runner de mac"
+          echo $RUNNER_OS
