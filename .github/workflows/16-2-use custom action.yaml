@@ -1,0 +1,12 @@
+name: 16 - 2 - Reusable Workflows
+on:
+    workflow_dispatch:
+jobs:
+    mainDeploy:      
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v6
+                
+            - name: "deploy"
+              uses: ./.github/deploy-action

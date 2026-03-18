@@ -1,0 +1,13 @@
+name: Deploy Action
+description: Deploy action
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout repo
+      uses: actions/checkout@v6
+
+    - name: Build
+      id: build
+      run: |
+      echo "Building using"
